@@ -1,0 +1,6 @@
+{
+  "extends": "@stsiarzhanau/nextjs-typescript",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
+}
