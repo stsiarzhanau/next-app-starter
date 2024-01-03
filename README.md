@@ -1,10 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) default template, configured to use TypeScript, Tailwind CSS, `src` directory and App Router.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) from default template, configured to use TypeScript, Tailwind CSS, `src` directory and App Router.
 
 On top of the default Next.js setup, this starter project includes:
 
 - **[Custom ESLint configuration](https://github.com/stsiarzhanau/eslint-config-nextjs-typescript)** with extended TypeScript support and additional rules for Tailwind CSS, Vitest, React Testing Library and more. Next.js specific rules are also included;
 - **.editorconfig file**;
-- **Prettier configuration** with special formatting rules for Tailwi`nd CSS;
+- **Prettier configuration** with special formatting rules for Tailwind CSS;
 - **Pre-commit hook** to lint and format staged files on commit with husky and lint-staged;
 - **Environment for unit tests** with Vite and React Testing Library.
 
@@ -86,7 +86,7 @@ Both ESLint (via [eslint-plugin-tailwindcss](https://github.com/francoismassart/
 
 `npm run coverage` - will generate code coverage reports using Vitest and output them to the `coverage/` directory.
 
-This starter uses [Vitest](https://vitest.dev/guide/why.html) as a test runner. It has Jest compatible API, but it's faster and easier to configure than Jest. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) (with additional matchers from [jest-dom](https://github.com/testing-library/jest-dom) enabled) is used for component testing. user-event (a companion library for Testing Library that simulates user interactions by dispatching the events that would happen if the interaction took place in a browser) is also installed and can be used without any additional configuration.
+This starter uses [Vitest](https://vitest.dev/guide/why.html) as a test runner. It has Jest compatible API, but it's faster and easier to configure than Jest. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) (with additional matchers from [jest-dom](https://github.com/testing-library/jest-dom) enabled) is used for component testing. [user-event](https://testing-library.com/docs/user-event/intro/) (a companion library for Testing Library that simulates user interactions by dispatching the events that would happen if the interaction took place in a browser) is also installed and can be used without any additional configuration.
 
 [happy-dom](https://github.com/capricorn86/happy-dom) is used by default as testing environment to test React components. [jsdom](https://github.com/jsdom/jsdom) is also installed as a fallback if happy-dom is not sufficient for some tests. You can also set environment on per-file basis using [control comments](https://vitest.dev/guide/environment.html#environments-for-specific-files).
 
@@ -98,7 +98,7 @@ This starter uses [Vitest](https://vitest.dev/guide/why.html) as a test runner. 
 
 `src/test-utils.tsx` (not included by default) - in your project you might want to create a [shared test utils file](https://testing-library.com/docs/react-testing-library/setup) to define common utilities, mocks and custom render method. It's not included by default as it's better to define such things on per-project basis due to different project requirements.
 
-> Note: you can use AI tools like [Sourcegraph Cody](https://sourcegraph.com/cody) to [generate](https://docs.sourcegraph.com/cody/use-cases/generate-unit-tests) test files and test cases automatically based on your code. Cody (when used as a Visual Studio Code extension) not only generates test boilerplate for a single source file but also tries to understand your whole codebase (incl. test setup files) and logic to generate meaningful test cases with proper mocks, assertions and edge cases.
+> Note: you can use AI tools to generate test files and test cases automatically based on your code. One such tool is [Cody AI](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) Visual Studio Code extension which is not only able to generate test boilerplate for a provided source file or code snippet but also tries to understand your whole codebase (incl. test setup files and `package.json`) to [generate meaningful test cases](https://docs.sourcegraph.com/cody/use-cases/generate-unit-tests) with proper mocks, assertions and edge cases. As a rule, your guidance is still required to review the generated tests and make necessary adjustments, but in a whole it can save a lot of time and effort compared to writing tests from scratch.
 
 ## Learn More
 
