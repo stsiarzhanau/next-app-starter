@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) from default template, configured to use TypeScript, Tailwind CSS, `src` directory and App Router.
+This project is based on a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) from default template, configured to use TypeScript, Tailwind CSS, `src` directory and App Router.
 
 On top of the default Next.js setup, this starter project includes:
 
@@ -98,7 +98,7 @@ This starter uses [Vitest](https://vitest.dev/guide/why.html) as a test runner. 
 
 `src/test-utils.tsx` (not included by default) - in your project you might want to create a [shared test utils file](https://testing-library.com/docs/react-testing-library/setup) to define common utilities, mocks and custom render method. It's not included by default as it's better to define such things on per-project basis due to different project requirements.
 
-> Note: you can use AI tools to generate test files and test cases automatically based on your code. One such tool is [Cody AI](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) Visual Studio Code extension which is not only able to generate test boilerplate for a provided source file or code snippet but also tries to understand your whole codebase (incl. test setup files and `package.json`) to [generate meaningful test cases](https://docs.sourcegraph.com/cody/use-cases/generate-unit-tests) with proper mocks, assertions and edge cases. As a rule, your guidance is still required to review the generated tests and make necessary adjustments, but in a whole it can save a lot of time and effort compared to writing tests from scratch.
+> Note: you can use AI tools to generate test files and test cases automatically based on your code. One such tool is [Cody AI](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) Visual Studio Code extension which is not only able to generate test boilerplate for a provided source file or code snippet but also tries to understand your whole codebase (incl. test setup files and `package.json`) to [generate meaningful test cases](https://docs.sourcegraph.com/cody/use-cases/generate-unit-tests) with proper mocks, assertions and edge cases. As a rule, your guidance is still required to review the generated tests and make necessary adjustments, but in a whole such approach can save a lot of time and effort compared to writing tests from scratch.
 
 ## Learn More
 
@@ -124,6 +124,56 @@ You can also deploy Next.js apps to other platforms. Here are some examples:
 
 ## Example Visual Studio Code setup
 
-Here is an example of recommended VS Code extensions and settings to enhance your Next.js development experience:
+Here is an example of recommended VS Code extensions and settings to enhance your Next.js development experience when working on projects based on this starter:
 
-// TODO
+#### Extensions:
+
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Formatting Toggle](https://marketplace.visualstudio.com/items?itemName=tombonnike.vscode-status-bar-format-toggle)
+
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
+- [Vitest](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer)
+
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
+- [Cody AI](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai)
+
+#### Settings:
+
+```json
+{
+  /* Sets "Prettier - Code formatter" extension as a default formatter */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  /* Turns on formatting only if a project contains Prettier configuration file */
+  "prettier.requireConfig": true,
+  /* Turns on formatting on save / paste / type */
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  /**
+   * Code formatting settings.
+   * Both .editorconfig and Prettier override this settings, so they are just a fallback.
+   */
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  /* Turn on autofix on save for ESLint */
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  /* Suggested in "Tailwind CSS IntelliSense" extension documentation */
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  /* Suggested in "Path IntelliSense" extension documentation */
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false
+}
+```
