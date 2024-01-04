@@ -143,7 +143,7 @@ Here is an example of recommended VS Code extensions and settings to enhance you
 
 #### Settings:
 
-```json
+```jsonc
 {
   /* Sets "Prettier - Code formatter" extension as a default formatter */
   "editor.defaultFormatter": "esbenp.prettier-vscode",
