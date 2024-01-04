@@ -1,5 +1,7 @@
 This project is based on a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) from default template, configured to use TypeScript, Tailwind CSS, `src` directory and App Router.
 
+The goal is an **enhanced developer experience** with pre-configured tools to ensure code quality and consistency and boost productivity.
+
 On top of the default Next.js setup, this starter project includes:
 
 - **[Custom ESLint configuration](https://github.com/stsiarzhanau/eslint-config-nextjs-typescript)** with extended TypeScript support and additional rules for Tailwind CSS, Vitest, React Testing Library and more. Next.js specific rules are also included;
