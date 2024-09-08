@@ -16,6 +16,8 @@ Clone this repository. Cloning the repository will download all files including 
 
 `cd` to the project directory and initialize new Git repository by running `rm -rf .git && git init`.
 
+Hint: You can also use [degit](https://github.com/Rich-Harris/degit) to make a copy of this repository. (This is much quicker than using `git clone`, because you're not downloading the entire git history). Just install degit globally with `npm install -g degit` and run `degit stsiarzhanau/next-app-starter#main <name-of-folder-for-your repo>` from the directory where you keep your projects. Then `cd` to the project directory and initialize new Git repository by running `git init`.
+
 Run `npm install` to install dependencies.
 
 Run the development server:
@@ -166,16 +168,16 @@ Here is an example of recommended VS Code extensions and settings to enhance you
 
   /* Turn on autofix on save for ESLint */
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
 
   /* Suggested in "Tailwind CSS IntelliSense" extension documentation */
   "editor.quickSuggestions": {
-    "strings": true
+    "strings": true,
   },
 
   /* Suggested in "Path IntelliSense" extension documentation */
   "typescript.suggest.paths": false,
-  "javascript.suggest.paths": false
+  "javascript.suggest.paths": false,
 }
 ```
